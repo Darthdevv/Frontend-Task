@@ -22,7 +22,7 @@ const Customers = () => {
   }, []);
 
   return (
-    <div className="hero w-[1000px] mx-auto bg-[#0F1218] min-h-screen">
+    <div className="hero w-[] mx-auto bg-[#0F1218] min-h-screen">
       <div className="w-full grid placeholder: text-center">
         <div className="w-full grid placeholder:">
           <h1>Customer Transactions</h1>

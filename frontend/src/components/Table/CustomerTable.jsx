@@ -1,43 +1,67 @@
+/* eslint-disable react/prop-types */
+
+import { useState } from "react";
 
 
-const CustomerTable = () => {
+const CustomerTable = ({ data, setSelectedCustomer }) => {
+    const [nameFilter, setNameFilter] = useState("");
+    const [amountFilter, setAmountFilter] = useState("");
+
+    const filteredCustomers = data.customers.filter((customer) =>
+      customer.name.toLowerCase().includes(nameFilter.toLowerCase())
+    );
+
+    const filteredTransactions = data.transactions.filter((transaction) =>
+      amountFilter ? transaction.amount >= amountFilter : true
+    );
   return (
-    <div className="overflow-x-auto">
-      <table className="table">
-        {/* head */}
-        <thead>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* row 1 */}
-          <tr className="hover">
-            <th>1</th>
-            <td>Cy Ganderton</td>
-            <td>Quality Control Specialist</td>
-            <td>Blue</td>
-          </tr>
-          {/* row 2 */}
-          <tr className="hover">
-            <th>2</th>
-            <td>Hart Hagerty</td>
-            <td>Desktop Support Technician</td>
-            <td>Purple</td>
-          </tr>
-          {/* row 3 */}
-          <tr className="hover">
-            <th>3</th>
-            <td>Brice Swyre</td>
-            <td>Tax Accountant</td>
-            <td>Red</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <>
+      <input
+        type="text"
+        placeholder="Filter by customer name"
+        value={nameFilter}
+        onChange={(e) => setNameFilter(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Filter by transaction amount"
+        value={amountFilter}
+        onChange={(e) => setAmountFilter(e.target.value)}
+      />
+      <div className="overflow-x-auto">
+        <table className="table">
+          {/* head */}
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Transactions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredCustomers.map((customer) => (
+              <tr
+                className="hover"
+                key={customer.id}
+                onClick={() => setSelectedCustomer(customer.id)}
+              >
+                <td>{customer.name}</td>
+                <td>
+                  {filteredTransactions
+                    .filter(
+                      (transaction) => transaction.customer_id === customer.id
+                    )
+                    .map((transaction) => (
+                      <td key={transaction.id}>
+                        {transaction.date}: ${transaction.amount}
+                      </td>
+                    ))}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
