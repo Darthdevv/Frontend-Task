@@ -1,12 +1,12 @@
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
-import Sidebar from "../components/Sidebar/Sidebar";
+// import Sidebar from "../components/Sidebar/Sidebar";
 
 const MainLayout = () => {
   return (
     <div>
       <Navbar />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Outlet />
     </div>
   );

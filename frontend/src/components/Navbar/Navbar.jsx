@@ -15,10 +15,10 @@ const Navbar = () => {
       <div className="navbar-end max-md:hidden">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to={"/create"}>Create Post</Link>
+            <Link to={"/customers"}>Customers</Link>
           </li>
           <li>
-            <Link to={"/authors"}>Authors</Link>
+            <Link to={"/transactions"}>Transactions</Link>
           </li>
         </ul>
       </div>
@@ -46,10 +46,10 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#0E1217] border border-[#2D323C] rounded-box w-52"
           >
             <li>
-              <Link to={"/create"}>Create Post</Link>
+              <Link to={"/customers"}>Customers</Link>
             </li>
             <li>
-              <Link to={"/authors"}>Authors</Link>
+              <Link to={"/transactions"}>Transactions</Link>
             </li>
           </ul>
         </div>
