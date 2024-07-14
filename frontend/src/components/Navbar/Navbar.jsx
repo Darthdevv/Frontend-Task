@@ -17,9 +17,6 @@ const Navbar = () => {
           <li>
             <Link to={"/customers"}>Customers</Link>
           </li>
-          <li>
-            <Link to={"/transactions"}>Transactions</Link>
-          </li>
         </ul>
       </div>
 
@@ -47,9 +44,6 @@ const Navbar = () => {
           >
             <li>
               <Link to={"/customers"}>Customers</Link>
-            </li>
-            <li>
-              <Link to={"/transactions"}>Transactions</Link>
             </li>
           </ul>
         </div>

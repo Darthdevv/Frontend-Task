@@ -24,7 +24,7 @@ const TransactionChart = ({ data, selectedCustomer }) => {
           acc[date] += transaction.amount;
           return acc;
         }, {}),
-        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        backgroundColor: "#00D8FE",
       },
     ],
   };

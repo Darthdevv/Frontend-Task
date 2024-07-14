@@ -100,3 +100,30 @@
 body{
   background-color: #0F1218;
 }
+
+main {
+  padding: 157px 127px;
+  background-image: url("./images/react-icon-dark.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  flex: 1 1 auto;
+  background-color: white;
+  background-size: 200px;
+}
+
+.btn-primary {
+    background-color: #33373D;
+    border: 1px solid #00D8FE;
+}
+
+.btn-primary:hover {
+    background-color: #00D8FE;
+    border: 1px solid #33373D;
+    color: #33373D;
+}
+
+.btn-primary {
+    --tw-text-opacity: 1;
+    color: #00D8FE;
+    outline-color: #00D8FE;
+}
