@@ -21,7 +21,7 @@ const Home = () => {
             using react, tailwindcss, daisyUi
           </p>
           <Link to={"/customers"}>
-            <button className="btn btn-primary mr-2">
+            <button aria-label="button for seeing all transactions" className="btn btn-primary mr-2">
               See All Transactions <MdOutlineKeyboardArrowRight />
             </button>
           </Link>
