@@ -16,19 +16,28 @@ const CustomerTable = ({ data, setSelectedCustomer }) => {
     );
   return (
     <>
-      <input
-        type="text"
-        placeholder="Filter by customer name"
-        value={nameFilter}
-        onChange={(e) => setNameFilter(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Filter by transaction amount"
-        value={amountFilter}
-        onChange={(e) => setAmountFilter(e.target.value)}
-      />
-      <div className="overflow-x-auto">
+      <div className="form-control">
+        <input
+          type="text"
+          placeholder="Filter by customer name"
+          className="input input-bordered mb-3"
+          value={nameFilter}
+          onChange={(e) => setNameFilter(e.target.value)}
+          autoFocus
+        />
+      </div>
+
+      <div className="form-control">
+        <input
+          type="number"
+          placeholder="Filter by transaction amount"
+          className="input input-bordered mb-6"
+          value={amountFilter}
+          onChange={(e) => setAmountFilter(e.target.value)}
+        />
+      </div>
+
+      <div className="overflow-x-auto mb-6">
         <table className="table">
           {/* head */}
           <thead>

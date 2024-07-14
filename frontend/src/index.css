@@ -108,7 +108,19 @@ main {
   background-position: right center;
   flex: 1 1 auto;
   background-color: white;
-  background-size: 200px;
+  background-size: 150px;
+}
+
+@media screen and  (max-width: 500px){
+main {
+  padding: 137px 127px;
+  background-image: url("./images/react-icon-dark.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  flex: 1 1 auto;
+  background-color: white;
+  background-size: 100px;
+}
 }
 
 .btn-primary {
@@ -126,4 +138,10 @@ main {
     --tw-text-opacity: 1;
     color: #00D8FE;
     outline-color: #00D8FE;
+}
+
+::selection {
+    background-color: #00d8fe;
+    opacity: 0.2;
+    color: #0F1218;
 }

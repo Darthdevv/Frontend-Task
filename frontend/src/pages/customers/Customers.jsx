@@ -22,10 +22,10 @@ const Customers = () => {
   }, []);
 
   return (
-    <div className="hero w-[] mx-auto bg-[#0F1218] min-h-screen">
+    <div className="hero py-20 mx-auto bg-[#0F1218] min-h-screen">
       <div className="w-full grid placeholder: text-center">
         <div className="w-full grid placeholder:">
-          <h1>Customer Transactions</h1>
+          <h1 className="text-2xl mb-6 font-bold text-white">Customer Transactions</h1>
           <CustomerTable
             data={data}
             setSelectedCustomer={setSelectedCustomer}
